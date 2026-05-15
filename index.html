@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🔐 Smart Password Generator</h1>
+
+    <div class="input-group">
+      <label>Password Length</label>
+      <input type="number" id="length" min="6" max="20" value="10">
+    </div>
+
+    <div class="input-group">
+      <label>Favorite Name / Word</label>
+      <input type="text" id="favWord" placeholder="e.g. lucky, tiger">
+    </div>
+
+    <div class="input-group">
+      <label>Lucky Number</label>
+      <input type="text" id="favNumber" placeholder="e.g. 7, 99">
+    </div>
+
+    <div class="options">
+      <label><input type="checkbox" id="numbers"> Include Numbers</label>
+      <label><input type="checkbox" id="symbols"> Include Symbols</label>
+    </div>
+
+    <button onclick="generatePassword()">Generate Password</button>
+
+    <div class="output">
+      <input type="text" id="result" readonly placeholder="Your password will appear here">
+      <button onclick="copyPassword()">Copy</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
